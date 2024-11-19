@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo JavaScript</title>
+</head>
+<body>
+    <h1>Bem-vindo ao JavaScript!</h1>
+
+    <!-- Aqui é o espaço do JavaScript -->
+    <script>
+        // ex 1
+        let nomeUsuario = prompt ("Digite seu nome")
+        alert(`Seja bem vindo, ${nomeUsuario} `)
+
+        // ex 2
+        let numero1 = prompt("Digite um numero: ")
+        let numero2 = prompt("Digite outro numero: ")
+        numero1 = Number(numero1)
+        numero2 = Number(numero2)
+        let soma = numero1 + numero2
+        alert("A soma desses numeros é: " + soma)
+
+        // ex 3
+        let anoAtual3 = prompt("Em que ano estamos?")
+        let anoNascimento = prompt("Em que ano você nasceu?")
+        anoAtual = Number(anoAtual)
+        anoNascimento = Number (anoNascimento)
+        idade = anoAtual - anoNascimento
+        alert("Sua idade é: " + idade)
+
+        // ex 4
+        let quantidade = prompt(`Diga a quantidade de sorvetes que você comprou: `)
+        let valor = prompt(`Qual é o valor do sorvete? `)
+        quantidade = Number (quantidade)
+        valor = Number(valor)
+        total= quantidade * valor
+        alert(`O total da conta deu ${total}`)
+        
+        // ex 5
+        let numeroSecreto 
+        numeroSecreto = Math.floor(Math.random()*10 +1)   
+        let numeroEscolhido = prompt (`Escolha um numero inteiro: `)
+        alert(`O numero sorteado foi ` + numeroSecreto + ` e o que você escolheu foi ${numeroEscolhido}`)
+
+        //ex 6
+        let primeiroNumero = prompt (`Escolha um numero: `)
+        let segundoNumero = prompt (`Escolha outro numero: `)
+        primeiroNumero = Number(primeiroNumero)
+        segundoNumero = Number(segundoNumero)
+        alert(`Voce escolheu os numeros ${primeiroNumero} e ${segundoNumero}`)
+
+        //ex 7
+        let valorConta = prompt (`Qual o valor total da conta?`)
+        let gorjeta = valorConta / 10
+        valorConta = Number(valorConta)
+        gorjeta = Number(gorjeta)
+        total = valorConta + gorjeta
+        alert (`O valor da conta é ${valorConta} e o da gorjeta é ${gorjeta} o total é R$${total}`)
+        
+        //ex 9 Pergunte ao usuário seu nome, o ano atual e quantos anos ele quer adicionar. Calcule e exiba o ano futuro.
+        let nome = prompt(`Qual é seu nome?`)
+        let anoAtual9 = prompt(`Qual ano estamos?`)
+        let anoAdicional = prompt(`Quantos anos voce quer adicionar?`)
+        anoAtual = Number(anoAtual)
+        anoAdicional = Number(anoAdicional)
+        let futuro = anoAtual + anoAdicional
+        alert(`Daqui ${anoAdicional} anos, será ${futuro}`)
+
+    </script>
+</body>
+
+<script src="./exercicios.js"></script>
+
+</html>
