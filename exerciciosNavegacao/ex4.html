@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Gorjeta</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="caixa">
+        <h2>Calculadora de Gorjeta</h2>
+        <input type="number" id="valor" placeholder="Valor da conta" step="0.01">
+        <select id="avaliacao">
+            <option value="bom">Bom (10%)</option>
+            <option value="otimo">Ótimo (15%)</option>
+            <option value="excelente">Excelente (20%)</option>
+        </select>
+        <button onclick="calcularGorjeta()">Calcular</button>
+        <p id="resultado"></p>
+        <button onclick="location.href='index.html'">Voltar</button>
+    </div>
+
+    <script>
+        function calcularGorjeta() {
+            const valor = parseFloat(document.getElementById('valor').value);
+            const avaliacao = document.getElementById('avaliacao').value;
+            
+            let percentual;
+            switch(avaliacao) {
+                case 'bom': percentual = 0.1; break;
+                case 'otimo': percentual = 0.15; break;
+                case 'excelente': percentual = 0.2; break;
+            }
+            
+            const gorjeta = valor * percentual;
+            const total = valor + gorjeta;
+            
+            document.getElementById('resultado').textContent = 
+                `Gorjeta: R$ ${gorjeta.toFixed(2)}\nTotal: R$ ${total.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

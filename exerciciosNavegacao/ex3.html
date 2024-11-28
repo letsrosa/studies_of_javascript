@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Média</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="caixa">
+        <h2>Calculadora de Média Escolar</h2>
+        <input type="number" id="nota1" placeholder="Nota 1" step="0.1">
+        <input type="number" id="nota2" placeholder="Nota 2" step="0.1">
+        <input type="number" id="nota3" placeholder="Nota 3" step="0.1">
+        <input type="number" id="nota4" placeholder="Nota 4" step="0.1">
+        <button onclick="calcularMedia()">Calcular</button>
+        <p id="resultado"></p>
+        <button onclick="location.href='index.html'">Voltar</button>
+    </div>
+
+    <script>
+        function calcularMedia() {
+            const notas = [
+                parseFloat(document.getElementById('nota1').value),
+                parseFloat(document.getElementById('nota2').value),
+                parseFloat(document.getElementById('nota3').value),
+                parseFloat(document.getElementById('nota4').value)
+            ];
+            
+            const media = notas.reduce((a, b) => a + b) / 4;
+            const resultado = document.getElementById('resultado');
+            
+            if (media >= 7) {
+                resultado.textContent = `Média: ${media.toFixed(1)} - Aprovado!`;
+            } else if (media >= 5) {
+                resultado.textContent = `Média: ${media.toFixed(1)} - Recuperação`;
+            } else {
+                resultado.textContent = `Média: ${media.toFixed(1)} - Reprovado`;
+            }
+        }
+    </script>
+</body>
+</html>

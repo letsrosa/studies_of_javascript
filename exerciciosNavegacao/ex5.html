@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Saudação</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="caixa">
+        <h2>Saudação de acordo com o horário</h2>
+        <button onclick="showSaudacao()">Mostrar Saudação</button>
+        <p id="resultado"></p>
+        <button onclick="location.href='index.html'">Voltar</button>
+    </div>
+
+    <script>
+        function showSaudacao() {
+            const hora = new Date().getHours();
+            let saudacao;
+            
+            if (hora >= 5 && hora < 12) {
+                saudacao = "Bom dia!";
+            } else if (hora >= 12 && hora < 18) {
+                saudacao = "Boa tarde!";
+            } else {
+                saudacao = "Boa noite!";
+            }
+            
+            document.getElementById('resultado').textContent = saudacao;
+        }
+    </script>
+</body>
+</html>

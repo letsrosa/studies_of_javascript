@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>JOGO ADIVINHA</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="caixa">
+        <h2>Acerte o número (1-10)</h2>
+        <input type="number" id="palpite" min="1" max="10">
+        <button onclick="analisarPalpite()">Verificar</button>
+        <p id="resultado"></p>
+        <button onclick="location.href='index.html'">Voltar</button>
+    </div>
+
+    <script>
+        function analisarPalpite() {
+            const palpite = parseInt(document.getElementById('palpite').value);
+            const numeroAleatorio = Math.floor(Math.random() * 10) + 1;
+            
+            const resultado = document.getElementById('resultado');
+            if (palpite === numeroAleatorio) {
+                resultado.textContent = "Parabéns, você acertou!";
+            } else {
+                resultado.textContent = `Tente novamente! O número era ${numeroAleatorio}`;
+            }
+        }
+    </script>
+</body>
+</html>

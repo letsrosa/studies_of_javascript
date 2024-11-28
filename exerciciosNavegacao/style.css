@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    align-content: center;
+    justify-items: center;
+}
+.botao-nav {
+    padding: 15px 24px;
+    margin: 5px;
+    background-color: #f7b257;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.botao-nav:hover {
+    background-color: #d825df;
+}
+
+
+
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #d825df;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input {
+    width: 30%;
+    height: 30px;
+}
